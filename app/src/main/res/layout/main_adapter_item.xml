@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/movie_poster_iv"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:background="@color/image_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="POSTER" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_poster"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/release_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0"
+            android:paddingBottom="2dp"
+            android:paddingStart="@dimen/default_space"
+            android:paddingEnd="2dp"
+            android:textColor="@color/poster_date"
+            android:textSize="@dimen/min_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/movie_title_tv" />
+
+        <TextView
+            android:id="@+id/movie_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:paddingBottom="@dimen/default_space"
+            android:paddingLeft="@dimen/default_space"
+            android:paddingRight="@dimen/default_space"
+            android:textColor="@color/poster_text"
+            android:textSize="@dimen/movie_label_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/movie_poster_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

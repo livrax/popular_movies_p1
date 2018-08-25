@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MovieActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        ​
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|snap">
+
+            <ImageView
+                android:id="@+id/poster_iv"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:adjustViewBounds="true"
+                android:background="@color/image_background"
+                android:contentDescription="@string/movie_picture_content_description"
+                android:scaleType="centerCrop"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/default_space">
+
+            <TextView
+                android:id="@+id/movie_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:paddingTop="@dimen/default_space"
+                android:textSize="@dimen/label_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tagline_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textStyle="italic"
+                app:layout_constraintTop_toBottomOf="@+id/movie_title_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/genres_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_space"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/tagline_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/runtime_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_space"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/genres_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/overview_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                app:layout_constraintTop_toBottomOf="@+id/runtime_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/production_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_space"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/overview_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/budget_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/release_date_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/revenue_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/budget_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/release_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/default_space"
+                android:paddingRight="@dimen/default_space"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintTop_toBottomOf="@+id/production_tv"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

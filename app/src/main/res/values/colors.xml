@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e53935</color>
+    <color name="colorPrimaryDark">#ab000d</color>
+    <color name="colorAccent">#ff6f60</color>
+    <color name="poster_text">#FFFFFF</color>
+    <color name="poster_date">#e6e600</color>
+    <color name="image_background">#000000</color>
+</resources>

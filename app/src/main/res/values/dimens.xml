@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_space">16dp</dimen>
+    <dimen name="movie_label_size">16sp</dimen>
+    <dimen name="min_text_size">10sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="label_text_size">18sp</dimen>
+    <dimen name="text_margin_top">8dp</dimen>
+</resources>
